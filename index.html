@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/m-solid.png">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
@@ -28,12 +29,12 @@
 
         <i class="fa-solid fa-bars" id="menu-icon"></i>
 
-        <button class="visit-btn">Visit Github</button>
+        
     </header>
 
     <section id="about" class="about">
         <div class="about-container">
-            <img src="Screenshot 2025-09-23 235228.png" alt="">
+            <img src="images/Screenshot 2025-09-23 235228.png" alt="">
 
             <div class="info-box">
 
@@ -43,14 +44,16 @@
                     <span>Full Stack Developer</span>
                 </div>
                 <p class="description">
-                    Backend developer focused on building scalable web applications with
-                    modern technologies. Experienced in backend development, databases,
-                    and creating clean user experiences.
+                    Software developer with experience building full-stack applications 
+                    using modern frameworks and relational databases. Skilled in backend 
+                    development, API design, and data management, with a focus on 
+                    writing clean and maintainable code. Currently seeking opportunities 
+                    to contribute to real-world software projects and grow as a developer.
                 </p>
 
                 <div class="btn-group">
-                    <div class="btn">Download CV</div>
-                    <div class="btn">Contact</div>
+                    <a href="assets/Resume.pdf" download class="btn">Download CV</a>
+                    <a href="#contact" class="btn">Contact</a>
                 </div>
 
                 <div class="socials">
@@ -109,54 +112,79 @@
                 </div>
             </div>
 
-            <img src="Screenshot 2025-09-23 235228.png" alt="">
+            <img src="images/Screenshot 2025-09-23 235228.png" alt="">
         </div>
     </section>
 
     <section id="projects" class="projects">
 
-        <h2 class="section-title">Recent Projects</h2>
+        <h2 class="section-title">Projects</h2>
 
         <div class="projects-grid">
 
             <div class="project-card">
-                <img src="Screenshot 2025-09-23 235228.png" alt="">
-                <h3>Professional Development Tracker</h3>
-                <p>Placeholder</p>
-                <div class="btn">Live Demo</div>
-                <div class="btn">Github Repo</div>
-            </div>
-
-            <div class="project-card">
-                <img src="Screenshot 2025-09-23 235228.png" alt="">
+                <div class="image-container one">
+                    <img src="images/capstone.PNG" alt="">
+                </div>
                 <h3>Inventory Management System</h3>
-                <p>Placeholder</p>
-                <div class="btn">Live Demo</div>
-                <div class="btn">Github Repo</div>
+                <p>Created an inventory management system for a childcare facility. 
+                    Used a MERN stack consisting of MongoDB, Express, React, and Node.
+                    Users can log in and see the active inventory. 
+                    Users are able to request and edit stock quantity 
+                    for each item within its corresponding room.</p>
             </div>
 
             <div class="project-card">
-                <img src="Screenshot 2025-09-23 235228.png" alt="">
+                <div class="image-container two">
+                    <img src="images/TEST 3.PNG" alt="">
+                </div>
+                <h3>Customer Inquiry</h3>
+                <p>This Mainframe project was made using Cobol. 
+                    The program can add customers, get customer information, 
+                    add orders, and get an invoice summary.</p>
+            </div>
+
+            <div class="project-card">
+                <div class="image-container three">
+                    <img src="images/Home.JPG" alt="">
+                </div>
                 <h3>Mobile School Schedule</h3>
-                <p>Placeholder</p>
-                <div class="btn">Live Demo</div>
-                <div class="btn">Github Repo</div>
+                <p>This was a group project within Mobile Development. 
+                    The app is a personal student organizer that showcases 
+                    a student's timetable, assignments, and grades. Users can 
+                    add their timetable, add assignments, and grades 
+                    for corresponding assignments.</p>
             </div>
         </div>
     </section>
 
     <section class="contact" id="contact">
-        <div class="input-box">
+        <h2 class="section-title">Contact Me</h2>
 
-            <h2 class="section-title">Contact Me</h2>
+        <form class="contact-form" name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact">
 
-            <div class="input">
-                <input type="text" placeholder="example@email.com">
-                <i class="fa-solid fa-envelope"></i>
+            <div class="input-box">
+                <div class="input">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
             </div>
 
-            <div class="btn">Submit</div>
-        </div>
+            <div class="input-box">
+                <div class="input">
+                    <input type="email" name="email" placeholder="example@email.com" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <textarea name="message" placeholder="Write your message..." rows="5" required></textarea>
+            </div>
+
+            <button class="btn" type="submit">Send Message</button>
+
+        </form>
     </section>
 
     <footer>
@@ -179,7 +207,7 @@
         <p class="copyright">© All Rights Reserved | Matthew Simpson</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
     
 </body>
 </html> 
