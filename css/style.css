@@ -8,6 +8,15 @@
     list-style: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
 a{
     color: inherit;
 }
@@ -107,6 +116,8 @@ section{
 }
 .about img{
     width: 30vw;
+    max-width: 450px;
+    min-width: 250px;
     border-radius: 50%;
 }
 .info-box{
@@ -263,12 +274,7 @@ section{
 }
 .project-card:hover{
     transform: translateY(-10px)scale(1.02);
-}
-.project-card img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 .project-card h3{
     font-size: 2rem;
@@ -280,7 +286,7 @@ section{
 .project-card p{
     font-size: 1.2rem;
 }
-.project-card .image-container-one{
+.project-card .image-container{
     width: 100%;
     height: 300px; 
     overflow: hidden;
@@ -290,6 +296,20 @@ section{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.image-container.one img{
+    height: 300px;
+    object-fit: cover;
+}
+
+.image-container.two img{
+    height: 300px;
+    object-fit: cover;
+}
+
+.image-container.three img{
+    height: 300px;
+    object-fit: contain;
 }
 
 .contact-form{
@@ -358,7 +378,7 @@ footer ul li a{
     font-weight: 600;
 }
 .copyright{
-    font-size: 300;
+    font-size: 0.9rem;
     margin-top: 2rem;
 }
 
@@ -375,8 +395,8 @@ footer ul li a{
         flex-direction: column;
     }
     .input-box input{
-        padding: 2rem 5rem;
-        font-size: 2.5rem;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
     }
     .input input::placeholder{
         font-size: 2.5rem;
@@ -415,7 +435,11 @@ footer ul li a{
     }
     .experience-info img{
         width: 70vw;
+        max-width: 350px;
     }
+    .projects-grid{
+    grid-template-columns: 1fr;
+}
 }
 
 @media(max-width:600px){
@@ -429,7 +453,6 @@ footer ul li a{
         width: 100%;
         padding: 1rem;
         color: white;
-        display: flex;
         flex-direction: column;
         text-align: center;
         background: rgba(0, 0, 0, 0.9);
@@ -441,11 +464,11 @@ footer ul li a{
         padding: 1rem;
     }
     .nav-links.active{
-        display: block;
+        display: flex;
     }
     header{
-        padding: 1rem 5rem;
-        gap: 8rem;
+        padding: 1rem 2rem;
+        gap: 1rem;
     }
     header .logo{
         font-size: 1.5rem;
@@ -456,7 +479,7 @@ footer ul li a{
     }
     .input-box input{
         padding: 0.5rem 3rem;
-        width: 80%;
+        width: 100%;
         font-size: 1.5rem;
     }
     .input-box input::placeholder{
@@ -465,4 +488,21 @@ footer ul li a{
     footer ul{
         gap: 1rem;
     }
+}
+
+@media(max-width:480px){
+
+    .info-box h1{
+        font-size: 2.5rem;
+    }
+
+    .info-box span{
+        font-size: 1.5rem;
+    }
+
+    .btn{
+        padding: 0.8rem 1.8rem;
+        font-size: 1rem;
+    }
+
 }
