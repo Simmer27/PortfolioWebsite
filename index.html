@@ -151,16 +151,23 @@
     <section class="contact" id="contact">
         <h2 class="section-title">Contact Me</h2>
 
-        <form class="contact-form" name="contact" method="POST" data-netlify="true">
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact">
 
+            <p hidden>
+                <label>
+                Don’t fill this out:
+                <input name="bot-field">
+                </label>
+            </p>
+            
             <div class="input-box">
                 <div class="input">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <i class="fa-solid fa-user"></i>
                 </div>
             </div>
-
+            
             <div class="input-box">
                 <div class="input">
                     <input type="email" name="email" placeholder="example@email.com" required>
